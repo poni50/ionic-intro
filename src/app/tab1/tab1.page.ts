@@ -7,6 +7,15 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
+  pics = [
+    "https://picsum.photos/id/237/200",
+    "https://picsum.photos/id/5/200",
+    "https://picsum.photos/id/25/200",
+    "https://picsum.photos/id/30/200",
+    "https://picsum.photos/id/110/200",
+    "https://picsum.photos/id/15/200",
+  ]
+  
   constructor() {}
 
 }

@@ -1,17 +1,33 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
+    <ion-title> NBA Champions </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-lg="3" size-md="4" size-sm="6" size="12" *ngFor="let team of teams">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>
+              {{team.name}}
+            </ion-card-title>
+            <ion-card-subtitle>
+              {{team.year}}
+            </ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            <img [src]="team.img">
+            <p>Best players:</p>
+            <ul>
+              <li *ngFor="let player of team.players">
+                <p>{{player}}</p>
+              </li>
+            </ul>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
