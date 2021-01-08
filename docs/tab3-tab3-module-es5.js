@@ -18,7 +18,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<ion-header [translucent]=\"true\">\r\n  <ion-toolbar>\r\n    <ion-title>\r\n      Tab 3\r\n    </ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content [fullscreen]=\"true\">\r\n  <ion-header collapse=\"condense\">\r\n    <ion-toolbar>\r\n      <ion-title size=\"large\">Tab 3</ion-title>\r\n    </ion-toolbar>\r\n  </ion-header>\r\n\r\n  <app-explore-container name=\"Tab 3 page\"></app-explore-container>\r\n</ion-content>\r\n";
+      __webpack_exports__["default"] = "<ion-header [translucent]=\"true\">\r\n  <ion-toolbar>\r\n    <ion-title> NBA Champions </ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content>\r\n  <ion-grid>\r\n    <ion-row>\r\n      <ion-col size-lg=\"3\" size-md=\"4\" size-sm=\"6\" size=\"12\" *ngFor=\"let team of teams\">\r\n        <ion-card>\r\n          <ion-card-header>\r\n            <ion-card-title>\r\n              {{team.name}}\r\n            </ion-card-title>\r\n            <ion-card-subtitle>\r\n              {{team.year}}\r\n            </ion-card-subtitle>\r\n          </ion-card-header>\r\n          <ion-card-content>\r\n            <img [src]=\"team.img\">\r\n            <p>Best players:</p>\r\n            <ul>\r\n              <li *ngFor=\"let player of team.players\">\r\n                <p>{{player}}</p>\r\n              </li>\r\n            </ul>\r\n          </ion-card-content>\r\n        </ion-card>\r\n      </ion-col>\r\n    </ion-row>\r\n  </ion-grid>\r\n</ion-content>\r\n";
       /***/
     },
 
@@ -186,7 +186,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3RhYjMvdGFiMy5wYWdlLnNjc3MifQ== */";
+      __webpack_exports__["default"] = "img {\n  width: 100%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdGFiMy90YWIzLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLFdBQUE7QUFDSiIsImZpbGUiOiJzcmMvYXBwL3RhYjMvdGFiMy5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJpbWd7XHJcbiAgICB3aWR0aDogMTAwJTtcclxufSJdfQ== */";
       /***/
     },
 
@@ -224,6 +224,23 @@
 
       var Tab3Page = function Tab3Page() {
         _classCallCheck(this, Tab3Page);
+
+        this.teams = [{
+          year: 2020,
+          name: 'Los Angeles Lakers',
+          img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Los_Angeles_Lakers_logo.svg/1200px-Los_Angeles_Lakers_logo.svg.png',
+          players: ['LeBron James', 'Anthony Davis', 'Dwight Howard', 'Danny Green', 'Markieff Morris']
+        }, {
+          year: 2019,
+          name: 'Toronto Raptors',
+          img: 'https://upload.wikimedia.org/wikipedia/en/thumb/3/36/Toronto_Raptors_logo.svg/1200px-Toronto_Raptors_logo.svg.png',
+          players: ['Kawhi Leonard', 'Pascal Siekam', 'Kyle Lowry', 'Fred Vanvleet', 'Serge Ibaka']
+        }, {
+          year: 2018,
+          name: 'Golden State Warriors',
+          img: 'https://upload.wikimedia.org/wikipedia/en/thumb/0/01/Golden_State_Warriors_logo.svg/1200px-Golden_State_Warriors_logo.svg.png',
+          players: ['Kevin Durant', 'Stephen Curry', 'Klay Thompson', 'Draymond Green', 'Andre Iguodala']
+        }];
       };
 
       Tab3Page.ctorParameters = function () {
